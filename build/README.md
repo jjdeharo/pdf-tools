@@ -35,36 +35,23 @@ PDF Tools for Firefox está construido específicamente para Mozilla Firefox usa
 
 _La extensión estará disponible en Mozilla Add-ons una vez completado el proceso de revisión._
 
-### Instalación manual desde código fuente
+### Para desarrolladores
 
-1.  Clona este repositorio:
-    ```bash
-    git clone https://github.com/jjdeharo/pdf-tools-for-firefox
-    cd pdf-tools-for-firefox
-    ```
+Si eres desarrollador y quieres contribuir o probar el código:
 
-2.  Construye la extensión:
-    ```bash
-    ./build.sh
-    ```
+1. Clona el repositorio: `git clone https://github.com/jjdeharo/pdf-tools-for-firefox`
+2. Ejecuta `./build.sh` para generar la versión de desarrollo
+3. Usa `about:debugging` en Firefox para cargar temporalmente
 
-3.  Instala en Firefox:
-    - Abre Firefox y ve a `about:debugging`
-    - Haz clic en **"Este Firefox"**
-    - Haz clic en **"Cargar complemento temporal"**
-    - Selecciona el archivo `build/manifest.json`
-
-4.  **¡Listo!** El sidebar se abrirá automáticamente.
+> **Nota**: Las instalaciones temporales solo sirven para desarrollo, se desinstalan al cerrar Firefox.
 
 ### Uso de la extensión
 
 **Acceso al sidebar:**
 - Se abre automáticamente tras la instalación
-- Usa el icono de la extensión para toggle del sidebar  
+- Toggle con el icono de la extensión en la barra de herramientas
 - También accesible desde: `Ver > Barra lateral > PDF Tools for Firefox`
 - **Perfecto para drag & drop**: El sidebar permanece abierto durante las operaciones
-
-> **Nota**: En Firefox, las extensiones temporales se desinstalan al cerrar el navegador. Para una instalación permanente, la extensión debe estar firmada por Mozilla.
 
 ## 🎓 Uso Educativo
 
