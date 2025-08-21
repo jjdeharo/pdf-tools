@@ -42,5 +42,6 @@
     "langAuto": { "message": "Automático" },
     "langSpanish": { "message": "Español" },
     "langEnglish": { "message": "Inglés" },
-    "actionTitle": { "message": "Abrir PDF_Tools" }
+    "actionTitle": { "message": "PDF_Tools" },
+    "firefoxPortBy": { "message": "Adaptado a Firefox por" }
 }

@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+  "version": "1.1",
+  "description": "__MSG_appDescription__",
+  "default_locale": "en",
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "sidebar_action": {
+    "default_title": "__MSG_actionTitle__",
+    "default_panel": "panel.html",
+    "default_icon": "images/icon48.png"
+  },
+  "browser_action": {
+    "default_title": "__MSG_actionTitle__"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "pdf-tools@pfelipm.github.io",
+      "strict_min_version": "57.0"
+    }
+  }
+}
