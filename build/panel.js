@@ -74,25 +74,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    async function setupFirefoxFooter() {
-        // Solo modificar el footer en Firefox
-        if (typeof browser !== 'undefined') {
-            const footerCredits = document.querySelector('.footer-credits');
-            if (footerCredits) {
-                // Obtener las traducciones antes de modificar el HTML
-                const attributionText = await getTranslatedMessage('footerAttribution');
-                const firefoxPortText = await getTranslatedMessage('firefoxPortBy');
-                
-                footerCredits.innerHTML = `
-                    <span>${attributionText}</span>
-                    <a href="https://www.linkedin.com/in/pfelipm/" target="_blank" rel="noopener noreferrer">Pablo Felip</a>
-                    <span>|</span>
-                    <span>${firefoxPortText}</span>
-                    <a href="https://bilateria.org" target="_blank" rel="noopener noreferrer">Juan José de Haro</a>
-                    <span>|</span>
-                    <a href="https://github.com/pfelipm/pdf-tools" target="_blank" rel="noopener noreferrer">GitHub</a>
-                `;
-            }
+    async function setupFooter() {
+        // Footer genérico más apropiado para proyecto independiente
+        const footerCredits = document.querySelector('.footer-credits');
+        if (footerCredits) {
+            const basedOnText = await getTranslatedMessage('basedOnWork');
+            
+            footerCredits.innerHTML = `
+                <span>PDF Tools for Firefox</span>
+                <span>|</span>
+                <span>${basedOnText}</span>
+                <a href="https://www.linkedin.com/in/pfelipm/" target="_blank" rel="noopener noreferrer">Pablo Felip</a>
+                <span>|</span>
+                <a href="https://github.com/jjdeharo/pdf-tools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            `;
         }
     }
 
@@ -100,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await browserAPI.storage.local.get('languageMode');
         currentLangMode = data.languageMode || 'auto';
         await applyLocalization();
-        await setupFirefoxFooter();
+        await setupFooter();
         setupEventListeners();
         resetUI();
     }
@@ -110,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLangMode = langModes[(currentIndex + 1) % langModes.length];
         await browserAPI.storage.local.set({ languageMode: currentLangMode });
         await applyLocalization();
-        await setupFirefoxFooter(); // Actualizar footer en Firefox
+        await setupFooter(); // Actualizar footer
     });
 
     // --- LÓGICA DE PESTAÑAS ---

@@ -1,10 +1,10 @@
-# PDF Tools (Cross-Browser)
+# PDF Tools for Firefox
 
 <p align="center">
   <img src="./readme-files/PT destacado 540x357.png">
 </p>
 
-**PDF Tools** es una extensión ligera y potente para **Google Chrome y Mozilla Firefox** que integra herramientas de manipulación de archivos PDF directamente en tu navegador. Une y divide documentos PDF con facilidad, sin necesidad de instalar software pesado ni depender de servicios en línea.
+**PDF Tools for Firefox** es una extensión ligera y potente para **Mozilla Firefox** que integra herramientas de manipulación de archivos PDF directamente en tu navegador. Une y divide documentos PDF con facilidad, sin necesidad de instalar software pesado ni depender de servicios en línea.
 
 Esta extensión nace de la necesidad de tener a mano herramientas rápidas y eficientes para las tareas más comunes con archivos PDF. En lugar de abrir aplicaciones de escritorio o subir archivos sensibles a la web, PDF Tools procesa todo localmente en tu navegador, garantizando velocidad y privacidad.
 
@@ -14,9 +14,7 @@ Esta extensión nace de la necesidad de tener a mano herramientas rápidas y efi
   <img src="./readme-files/Capturas.gif">
 </p>
 
-* **Panel lateral moderno**: Accede a todas las herramientas desde un cómodo panel lateral en ambos navegadores
-  - **Chrome**: Side Panel API (Manifest v3) 
-  - **Firefox**: Sidebar Action API (Manifest v2)
+* **Panel lateral integrado**: Accede a todas las herramientas desde un cómodo panel lateral que se mantiene abierto para operaciones drag & drop
 * **Unir PDF**: Combina múltiples archivos PDF en un único documento.
     * **Arrastrar y soltar**: Añade archivos fácilmente arrastrándolos a la interfaz.
     * **Reordenación visual**: Cambia el orden de los archivos antes de unirlos simplemente arrastrándolos en la lista.
@@ -29,61 +27,50 @@ Esta extensión nace de la necesidad de tener a mano herramientas rápidas y efi
 
 ## ⚙️ Descripción Técnica
 
-PDF_Tools está construido con tecnologías web estándar y es compatible con múltiples navegadores.
+PDF Tools for Firefox está construido específicamente para Mozilla Firefox usando tecnologías web estándar.
 
-* **Compatibilidad cross-browser**: 
-  - **Chrome**: Manifest V3, Service Worker, Side Panel API
-  - **Firefox**: Manifest V2, Background Script, Sidebar Action API
+* **Firefox optimizado**: 
+  - **Manifest V2**: Compatible con Firefox
+  - **Sidebar Action API**: Panel lateral integrado nativo
+  - **Background Script**: Gestión eficiente del sidebar
 * **JavaScript (vanilla JS)**: Toda la lógica de la aplicación está escrita en JavaScript puro, sin dependencias de frameworks, lo que asegura un rendimiento óptimo y un tamaño de paquete reducido.
-* **APIs de extensiones**: Utiliza las APIs estándar de extensiones web para funcionalidades como internacionalización y almacenamiento local.
-* **Procesamiento local**: Todo el procesamiento de PDFs se realiza en el navegador usando PDF-lib.
+* **APIs de extensiones**: Utiliza las APIs estándar de WebExtensions para funcionalidades como internacionalización y almacenamiento local.
+* **Procesamiento local**: Todo el procesamiento de PDFs se realiza en el navegador usando PDF-lib, garantizando privacidad completa.
 
 ## 🚀 Instalación
 
-### Chrome
+### Desde Mozilla Add-ons (próximamente)
 
-#### Opción 1: Desde la Chrome Web Store (recomendado)
+_La extensión estará disponible en Mozilla Add-ons una vez completado el proceso de revisión._
 
-1.  Visita la [página de PDF_Tools](https://chromewebstore.google.com/detail/amfbkjdnaalliclaenmafeohionnkmoa) en la Chrome Web Store.
-2.  Haz clic en "Añadir a Chrome".
-3.  ¡Listo! Ya puedes usar la extensión.
+### Instalación manual desde código fuente
 
-#### Opción 2: Desde el código fuente
-
-1.  Descarga y descomprime o clona este repositorio:
+1.  Clona este repositorio:
     ```bash
-    git clone https://github.com/pfelipm/pdf-tools
+    git clone https://github.com/jjdeharo/pdf-tools
     cd pdf-tools
     ```
-2.  Ejecuta el script de construcción:
+
+2.  Construye la extensión:
     ```bash
     ./build.sh
     ```
-3.  Abre Google Chrome y ve a `chrome://extensions/`.
-4.  Activa el **"Modo de desarrollador"** en la esquina superior derecha.
-5.  Haz clic en **"Cargar descomprimida"**.
-6.  Selecciona la carpeta `build/chrome/`.
-7.  ¡Listo! El icono aparecerá en tu barra de extensiones.
 
-### Firefox
+3.  Instala en Firefox:
+    - Abre Firefox y ve a `about:debugging`
+    - Haz clic en **"Este Firefox"**
+    - Haz clic en **"Cargar complemento temporal"**
+    - Selecciona el archivo `build/manifest.json`
 
-#### Instalación desde código fuente
+4.  **¡Listo!** El sidebar se abrirá automáticamente.
 
-1.  Ejecuta el script de construcción (si no lo has hecho ya):
-    ```bash
-    ./build.sh
-    ```
-2.  Abre Firefox y ve a `about:debugging`.
-3.  Haz clic en **"Este Firefox"**.
-4.  Haz clic en **"Cargar complemento temporal"**.
-5.  Selecciona el archivo `build/firefox/manifest.json`.
-6.  ¡Listo! El icono aparecerá en tu barra de herramientas.
+### Uso de la extensión
 
-**Acceso al sidebar en Firefox:**
-- El sidebar se abre automáticamente tras la instalación
-- Usa el icono de la extensión para abrir/cerrar el sidebar  
+**Acceso al sidebar:**
+- Se abre automáticamente tras la instalación
+- Usa el icono de la extensión para toggle del sidebar  
 - También accesible desde: `Ver > Barra lateral > PDF Tools for Firefox`
-- **Perfecto para drag & drop**: El sidebar permanece abierto al arrastrar archivos
+- **Perfecto para drag & drop**: El sidebar permanece abierto durante las operaciones
 
 > **Nota**: En Firefox, las extensiones temporales se desinstalan al cerrar el navegador. Para una instalación permanente, la extensión debe estar firmada por Mozilla.
 

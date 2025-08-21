@@ -43,5 +43,5 @@
     "langSpanish": { "message": "Espanyol" },
     "langEnglish": { "message": "Anglès" },
     "actionTitle": { "message": "PDF Tools" },
-    "firefoxPortBy": { "message": "Adaptat a Firefox per" }
+    "basedOnWork": { "message": "Basat en el treball de" }
 }

@@ -1,25 +1,34 @@
 {
-  "manifest_version": 3,
+  "_comment": "Firefox adaptation of PDF_Tools by Juan José de Haro (https://bilateria.org) - Original work by Pablo Felip (https://www.linkedin.com/in/pfelipm/) - Licensed under GPL v3",
+  "manifest_version": 2,
   "name": "__MSG_appName__",
   "version": "1.1",
   "description": "__MSG_appDescription__",
   "default_locale": "en",
   "permissions": [
-    "sidePanel",
     "storage"
   ],
   "background": {
-    "service_worker": "service-worker.js"
+    "scripts": ["background.js"],
+    "persistent": false
   },
-  "side_panel": {
-    "default_path": "panel.html"
+  "sidebar_action": {
+    "default_title": "__MSG_actionTitle__",
+    "default_panel": "panel.html",
+    "default_icon": "images/icon48.png"
   },
-  "action": {
+  "browser_action": {
     "default_title": "__MSG_actionTitle__"
   },
   "icons": {
     "16": "images/icon16.png",
     "48": "images/icon48.png",
     "128": "images/icon128.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "pdf-tools@pfelipm.github.io",
+      "strict_min_version": "57.0"
+    }
   }
 }

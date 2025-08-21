@@ -43,5 +43,5 @@
     "langSpanish": { "message": "Spanish" },
     "langEnglish": { "message": "English" },
     "actionTitle": { "message": "PDF Tools" },
-    "firefoxPortBy": { "message": "Firefox port by" }
+    "basedOnWork": { "message": "Based on work by" }
 }
