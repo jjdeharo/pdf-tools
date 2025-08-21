@@ -74,18 +74,27 @@ _La extensión estará disponible en Mozilla Add-ons una vez completado el proce
 
 > **Nota**: En Firefox, las extensiones temporales se desinstalan al cerrar el navegador. Para una instalación permanente, la extensión debe estar firmada por Mozilla.
 
-Esta opción puede facilitar el despliegue de la extensión en un aula en la que los ordenadores estén configurados para navegar de manera predeterminada en modo incógnito. En este caso, tras instalarla en el navegador de cada equipo, marca la opción **"Permitir en incógnito"** en los ajustes de la extensión para que permanezca activa en este modo.
+## 🎓 Uso Educativo
+
+Esta extensión es especialmente útil en entornos educativos donde estudiantes y profesores necesitan:
+- **Combinar documentos**: Unir múltiples PDFs de tareas, apuntes o recursos
+- **Extraer contenido**: Dividir documentos largos en secciones específicas  
+- **Privacidad garantizada**: Todo el procesamiento es local, ideal para documentos sensibles
+- **Sin instalaciones**: Funciona directamente en el navegador
+
+Para despliegue en aulas donde los ordenadores naveguen en modo incógnito por defecto, tras instalar la extensión marca la opción **"Permitir en incógnito"** en los ajustes para que permanezca activa.
 
 ## 💙 Créditos
 
 Este proyecto ha sido creado y es mantenido por **[Pablo Felip](https://www.linkedin.com/in/pfelipm/)**.
 
 ### Modificaciones para Firefox
-Esta versión incluye adaptaciones para compatibilidad con Mozilla Firefox realizadas por **[Juan José de Haro](https://bilateria.org)**:
-- Soporte cross-browser (Chrome + Firefox)
+Esta versión incluye adaptaciones para compatibilidad con Mozilla Firefox realizadas por **[Juan José de Haro](https://bilateria.org)** como parte de la comunidad **[Vibe Coding Educativo](https://vibe-coding-educativo.github.io/)**:
+- Adaptación completa para Mozilla Firefox
 - Implementación de Sidebar Action API para Firefox
 - Sistema de construcción automatizada
-- Compatibilidad de APIs de extensiones
+- Interfaz optimizada para drag & drop
+- Footer genérico apropiado para proyecto independiente
 
 Este proyecto no sería posible sin el excelente trabajo de la comunidad de código abierto. Las siguientes bibliotecas se utilizan en esta extensión:
 
