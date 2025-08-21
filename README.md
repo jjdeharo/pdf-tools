@@ -35,16 +35,6 @@ PDF Tools for Firefox está construido específicamente para Mozilla Firefox usa
 
 _La extensión estará disponible en Mozilla Add-ons una vez completado el proceso de revisión._
 
-### Para desarrolladores
-
-Si eres desarrollador y quieres contribuir o probar el código:
-
-1. Clona el repositorio: `git clone https://github.com/jjdeharo/pdf-tools-for-firefox`
-2. Ejecuta `./build.sh` para generar la versión de desarrollo
-3. Usa `about:debugging` en Firefox para cargar temporalmente
-
-> **Nota**: Las instalaciones temporales solo sirven para desarrollo, se desinstalan al cerrar Firefox.
-
 ### Uso de la extensión
 
 **Acceso al sidebar:**
