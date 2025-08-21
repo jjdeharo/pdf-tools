@@ -6,10 +6,6 @@ Esta extensión nace de la necesidad de tener a mano herramientas rápidas y efi
 
 ## ✨ Características Principales
 
-<p align="center">
-  <img src="./readme-files/Capturas.gif">
-</p>
-
 * **Panel lateral integrado**: Accede a todas las herramientas desde un cómodo panel lateral que se mantiene abierto para operaciones drag & drop
 * **Unir PDF**: Combina múltiples archivos PDF en un único documento.
     * **Arrastrar y soltar**: Añade archivos fácilmente arrastrándolos a la interfaz.
