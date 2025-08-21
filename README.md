@@ -1,9 +1,5 @@
 # PDF Tools for Firefox
 
-<p align="center">
-  <img src="./readme-files/PT destacado 540x357.png">
-</p>
-
 **PDF Tools for Firefox** es una extensión ligera y potente para **Mozilla Firefox** que integra herramientas de manipulación de archivos PDF directamente en tu navegador. Une y divide documentos PDF con facilidad, sin necesidad de instalar software pesado ni depender de servicios en línea.
 
 Esta extensión nace de la necesidad de tener a mano herramientas rápidas y eficientes para las tareas más comunes con archivos PDF. En lugar de abrir aplicaciones de escritorio o subir archivos sensibles a la web, PDF Tools procesa todo localmente en tu navegador, garantizando velocidad y privacidad.
@@ -47,8 +43,8 @@ _La extensión estará disponible en Mozilla Add-ons una vez completado el proce
 
 1.  Clona este repositorio:
     ```bash
-    git clone https://github.com/jjdeharo/pdf-tools
-    cd pdf-tools
+    git clone https://github.com/jjdeharo/pdf-tools-for-firefox
+    cd pdf-tools-for-firefox
     ```
 
 2.  Construye la extensión:

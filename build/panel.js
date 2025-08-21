@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span>${basedOnText}</span>
                 <a href="https://www.linkedin.com/in/pfelipm/" target="_blank" rel="noopener noreferrer">Pablo Felip</a>
                 <span>|</span>
-                <a href="https://github.com/jjdeharo/pdf-tools" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://github.com/jjdeharo/pdf-tools-for-firefox" target="_blank" rel="noopener noreferrer">GitHub</a>
             `;
         }
     }
