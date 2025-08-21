@@ -1,4 +1,5 @@
 {
+  "_comment": "Firefox adaptation of PDF_Tools by Juan José de Haro (https://bilateria.org) - Original work by Pablo Felip (https://www.linkedin.com/in/pfelipm/) - Licensed under GPL v3",
   "manifest_version": 2,
   "name": "__MSG_appName__",
   "version": "1.1",

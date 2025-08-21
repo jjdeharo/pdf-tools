@@ -1,5 +1,5 @@
 {
-    "appName": { "message": "PDF_Tools" },
+    "appName": { "message": "PDF Tools for Firefox" },
     "appDescription": { "message": "Drag and drop files, reorder them, and merge them into a single PDF. Extract pages or ranges from a PDF into multiple files." },
     "footerAttribution": { "message": "Created with 🩵 by " },
     "tabMerge": { "message": "Merge PDFs" },
@@ -42,6 +42,6 @@
     "langAuto": { "message": "Auto" },
     "langSpanish": { "message": "Spanish" },
     "langEnglish": { "message": "English" },
-    "actionTitle": { "message": "PDF_Tools" },
+    "actionTitle": { "message": "PDF Tools" },
     "firefoxPortBy": { "message": "Firefox port by" }
 }

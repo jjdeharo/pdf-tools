@@ -1,5 +1,7 @@
 // Background script para Firefox (Manifest v2)
-// Reemplaza service-worker.js para compatibilidad con Firefox
+// Firefox adaptation of PDF_Tools by Juan José de Haro (https://bilateria.org)
+// Original work by Pablo Felip (https://www.linkedin.com/in/pfelipm/)
+// Licensed under GPL v3 - Reemplaza service-worker.js para compatibilidad con Firefox
 
 // Manejo del sidebar en Firefox
 // El sidebar se abre automáticamente al instalar la extensión (comportamiento por defecto de Firefox)

@@ -1,5 +1,5 @@
 {
-    "appName": { "message": "PDF_Tools" },
+    "appName": { "message": "PDF Tools for Firefox" },
     "appDescription": { "message": "Arrastra y suelta archivos, reordénalos y únelos en un solo PDF. Extrae páginas o rangos de un PDF en múltiples archivos." },
     "footerAttribution": { "message": "Creado con 🩵 por " },
     "tabMerge": { "message": "Unir PDFs" },
@@ -42,6 +42,6 @@
     "langAuto": { "message": "Automático" },
     "langSpanish": { "message": "Español" },
     "langEnglish": { "message": "Inglés" },
-    "actionTitle": { "message": "PDF_Tools" },
+    "actionTitle": { "message": "PDF Tools" },
     "firefoxPortBy": { "message": "Adaptado para Firefox por" }
 }

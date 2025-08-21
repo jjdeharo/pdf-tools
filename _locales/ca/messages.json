@@ -1,5 +1,5 @@
 {
-    "appName": { "message": "PDF_Tools" },
+    "appName": { "message": "PDF Tools for Firefox" },
     "appDescription": { "message": "Arrossega i deixa anar fitxers, reordena'ls i uneix-los en un sol PDF. Extreu pàgines o rangs d'un PDF en múltiples fitxers." },
     "footerAttribution": { "message": "Creat amb 🩵 per " },
     "tabMerge": { "message": "Unir PDFs" },
@@ -42,6 +42,6 @@
     "langAuto": { "message": "Automàtic" },
     "langSpanish": { "message": "Espanyol" },
     "langEnglish": { "message": "Anglès" },
-    "actionTitle": { "message": "PDF_Tools" },
+    "actionTitle": { "message": "PDF Tools" },
     "firefoxPortBy": { "message": "Adaptat a Firefox per" }
 }

@@ -33,11 +33,13 @@ body {
     body {
         padding-top: 0.5rem;
         background-color: var(--gray-50);
+        min-width: 350px;
     }
     .container {
         margin-top: 0;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+        max-width: none;
     }
 }
 

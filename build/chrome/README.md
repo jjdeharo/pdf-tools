@@ -1,12 +1,12 @@
-# PDF_Tools
+# PDF Tools (Cross-Browser)
 
 <p align="center">
   <img src="./readme-files/PT destacado 540x357.png">
 </p>
 
-**PDF_Tools** es una extensión ligera y potente para **Google Chrome y Mozilla Firefox** que integra herramientas de manipulación de archivos PDF directamente en tu navegador. Une y divide documentos PDF con facilidad, sin necesidad de instalar software pesado ni depender de servicios en línea.
+**PDF Tools** es una extensión ligera y potente para **Google Chrome y Mozilla Firefox** que integra herramientas de manipulación de archivos PDF directamente en tu navegador. Une y divide documentos PDF con facilidad, sin necesidad de instalar software pesado ni depender de servicios en línea.
 
-Esta extensión nace de la necesidad de tener a mano herramientas rápidas y eficientes para las tareas más comunes con archivos PDF. En lugar de abrir aplicaciones de escritorio o subir archivos sensibles a la web, PDF_Tools procesa todo localmente en tu navegador, garantizando velocidad y privacidad.
+Esta extensión nace de la necesidad de tener a mano herramientas rápidas y eficientes para las tareas más comunes con archivos PDF. En lugar de abrir aplicaciones de escritorio o subir archivos sensibles a la web, PDF Tools procesa todo localmente en tu navegador, garantizando velocidad y privacidad.
 
 ## ✨ Características Principales
 
@@ -15,7 +15,7 @@ Esta extensión nace de la necesidad de tener a mano herramientas rápidas y efi
 </p>
 
 * **Panel lateral moderno**: Accede a todas las herramientas desde un cómodo panel lateral en ambos navegadores
-  - **Chrome**: Side Panel API (Manifest v3)
+  - **Chrome**: Side Panel API (Manifest v3) 
   - **Firefox**: Sidebar Action API (Manifest v2)
 * **Unir PDF**: Combina múltiples archivos PDF en un único documento.
     * **Arrastrar y soltar**: Añade archivos fácilmente arrastrándolos a la interfaz.
@@ -79,11 +79,11 @@ PDF_Tools está construido con tecnologías web estándar y es compatible con m�
 5.  Selecciona el archivo `build/firefox/manifest.json`.
 6.  ¡Listo! El icono aparecerá en tu barra de herramientas.
 
-**Acceso al panel lateral en Firefox:**
+**Acceso al sidebar en Firefox:**
 - El sidebar se abre automáticamente tras la instalación
-- Usa el icono de la extensión para abrir/cerrar el sidebar
-- También accesible desde: `Ver > Barra lateral > PDF Tools`
-- Atajo de teclado: `Ctrl+Shift+Y` (puede variar según configuración)
+- Usa el icono de la extensión para abrir/cerrar el sidebar  
+- También accesible desde: `Ver > Barra lateral > PDF Tools for Firefox`
+- **Perfecto para drag & drop**: El sidebar permanece abierto al arrastrar archivos
 
 > **Nota**: En Firefox, las extensiones temporales se desinstalan al cerrar el navegador. Para una instalación permanente, la extensión debe estar firmada por Mozilla.
 
@@ -92,6 +92,13 @@ Esta opción puede facilitar el despliegue de la extensión en un aula en la que
 ## 💙 Créditos
 
 Este proyecto ha sido creado y es mantenido por **[Pablo Felip](https://www.linkedin.com/in/pfelipm/)**.
+
+### Modificaciones para Firefox
+Esta versión incluye adaptaciones para compatibilidad con Mozilla Firefox realizadas por **[Juan José de Haro](https://bilateria.org)**:
+- Soporte cross-browser (Chrome + Firefox)
+- Implementación de Sidebar Action API para Firefox
+- Sistema de construcción automatizada
+- Compatibilidad de APIs de extensiones
 
 Este proyecto no sería posible sin el excelente trabajo de la comunidad de código abierto. Las siguientes bibliotecas se utilizan en esta extensión:
 
