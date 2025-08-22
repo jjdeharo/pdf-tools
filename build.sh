@@ -12,7 +12,6 @@ echo "📦 Copiando archivos..."
 cp -r _locales/ build/
 cp -r images/ build/
 cp -r libs/ build/
-cp -r readme-files/ build/
 cp panel.html build/
 cp panel.js build/
 cp style.css build/
