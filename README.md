@@ -35,6 +35,28 @@ PDF Tools for Firefox está construido específicamente para Mozilla Firefox usa
 
 _La extensión estará disponible en Mozilla Add-ons una vez completado el proceso de revisión._
 
+### 🧪 Probar localmente en Firefox
+
+Puedes cargar la extensión de forma temporal para desarrollo y pruebas.
+
+Opción A: carga directa del manifiesto
+- Abre Firefox y ve a `about:debugging#/runtime/this-firefox`.
+- Haz clic en «Cargar complemento temporal…».
+- Selecciona `manifest.json` en la raíz del proyecto.
+
+Opción B: usando el script de build
+- En terminal, en la raíz del repo: `bash build.sh`.
+- En Firefox: `about:debugging#/runtime/this-firefox` → «Cargar complemento temporal…».
+- Selecciona `build/manifest.json`.
+
+Abrir y usar el panel
+- Abre la barra lateral (F9 o botón de «Barras laterales»).
+- Elige «PDF Tools for Firefox». También puedes pulsar el icono de la extensión para abrir el sidebar.
+
+Ciclo de desarrollo
+- Tras cambios en el código, en `about:debugging` pulsa «Recargar» en la tarjeta del complemento.
+- Las cargas temporales se pierden al reiniciar Firefox; instala desde AMO para uso persistente.
+
 ### Uso de la extensión
 
 **Acceso al sidebar:**
