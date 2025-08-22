@@ -42,6 +42,6 @@
     "langAuto": { "message": "Automàtic" },
     "langSpanish": { "message": "Espanyol" },
     "langEnglish": { "message": "Anglès" },
-    "actionTitle": { "message": "PDF Tools" },
+    "actionTitle": { "message": "PDF Tools for Firefox" },
     "basedOnWork": { "message": "Basat en el treball de" }
 }

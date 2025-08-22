@@ -8,19 +8,12 @@
 // Los usuarios pueden abrirlo/cerrarlo desde el menú Ver > Barra lateral o usando el icono
 
 // Listener para cuando se hace clic en el browser action
-// Esto permite toggle del sidebar programáticamente
+// Esto simplemente abre el sidebar (compatible con Firefox 58+)
 browser.browserAction.onClicked.addListener(async (tab) => {
     try {
-        // Verificar si el sidebar está abierto
-        const isOpen = await browser.sidebarAction.isOpen({ windowId: tab.windowId });
-        
-        if (isOpen) {
-            await browser.sidebarAction.close();
-        } else {
-            await browser.sidebarAction.open();
-        }
+        await browser.sidebarAction.open();
     } catch (error) {
-        console.error('Error toggling sidebar:', error);
+        console.error('Error opening sidebar:', error);
     }
 });
 

@@ -80,14 +80,39 @@ document.addEventListener('DOMContentLoaded', () => {
         if (footerCredits) {
             const basedOnText = await getTranslatedMessage('basedOnWork');
             
-            footerCredits.innerHTML = `
-                <span>PDF Tools for Firefox</span>
-                <span>|</span>
-                <span>${basedOnText}</span>
-                <a href="https://www.linkedin.com/in/pfelipm/" target="_blank" rel="noopener noreferrer">Pablo Felip</a>
-                <span>|</span>
-                <a href="https://github.com/jjdeharo/pdf-tools-for-firefox" target="_blank" rel="noopener noreferrer">GitHub</a>
-            `;
+            // Clear existing content
+            footerCredits.textContent = '';
+            
+            // Create elements safely
+            const titleSpan = document.createElement('span');
+            titleSpan.textContent = 'PDF Tools for Firefox';
+            footerCredits.appendChild(titleSpan);
+            
+            const separator1 = document.createElement('span');
+            separator1.textContent = '|';
+            footerCredits.appendChild(separator1);
+            
+            const basedOnSpan = document.createElement('span');
+            basedOnSpan.textContent = basedOnText;
+            footerCredits.appendChild(basedOnSpan);
+            
+            const pabloLink = document.createElement('a');
+            pabloLink.href = 'https://www.linkedin.com/in/pfelipm/';
+            pabloLink.target = '_blank';
+            pabloLink.rel = 'noopener noreferrer';
+            pabloLink.textContent = 'Pablo Felip';
+            footerCredits.appendChild(pabloLink);
+            
+            const separator2 = document.createElement('span');
+            separator2.textContent = '|';
+            footerCredits.appendChild(separator2);
+            
+            const githubLink = document.createElement('a');
+            githubLink.href = 'https://github.com/jjdeharo/pdf-tools-for-firefox';
+            githubLink.target = '_blank';
+            githubLink.rel = 'noopener noreferrer';
+            githubLink.textContent = 'GitHub';
+            footerCredits.appendChild(githubLink);
         }
     }
 
@@ -181,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         async function updateFileListUI() {
-            fileListContainer.innerHTML = '';
+            fileListContainer.textContent = '';
             if (selectedFiles.length > 0) {
                 const list = document.createElement('ul');
                 const pageSuffixSingle = await getTranslatedMessage('pageSuffix');
@@ -191,15 +216,56 @@ document.addEventListener('DOMContentLoaded', () => {
                     listItem.setAttribute('data-id', fileWrapper.id);
                     listItem.className = 'file-item-container';
                     const pageSuffix = fileWrapper.pageCount === 1 ? pageSuffixSingle : pageSuffixPlural;
-                    listItem.innerHTML = `
-                        <div class="flex">
-                            <svg class="icon-drag" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                            <span class="file-name">${fileWrapper.file.name}</span>
-                            <span class="file-pages">(${fileWrapper.pageCount} ${pageSuffix})</span>
-                        </div>
-                        <button class="remove-btn">
-                           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                        </button>`;
+                    // Create main div
+                    const flexDiv = document.createElement('div');
+                    flexDiv.className = 'flex';
+                    
+                    // Create drag icon SVG
+                    const dragSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                    dragSvg.className = 'icon-drag';
+                    dragSvg.setAttribute('fill', 'none');
+                    dragSvg.setAttribute('stroke', 'currentColor');
+                    dragSvg.setAttribute('viewBox', '0 0 24 24');
+                    const dragPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                    dragPath.setAttribute('stroke-linecap', 'round');
+                    dragPath.setAttribute('stroke-linejoin', 'round');
+                    dragPath.setAttribute('stroke-width', '2');
+                    dragPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                    dragSvg.appendChild(dragPath);
+                    flexDiv.appendChild(dragSvg);
+                    
+                    // Create file name span
+                    const fileNameSpan = document.createElement('span');
+                    fileNameSpan.className = 'file-name';
+                    fileNameSpan.textContent = fileWrapper.file.name;
+                    flexDiv.appendChild(fileNameSpan);
+                    
+                    // Create file pages span
+                    const filePagesSpan = document.createElement('span');
+                    filePagesSpan.className = 'file-pages';
+                    filePagesSpan.textContent = '(' + fileWrapper.pageCount + ' ' + pageSuffix + ')';
+                    flexDiv.appendChild(filePagesSpan);
+                    
+                    listItem.appendChild(flexDiv);
+                    
+                    // Create remove button
+                    const removeBtn = document.createElement('button');
+                    removeBtn.className = 'remove-btn';
+                    
+                    // Create remove icon SVG
+                    const removeSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                    removeSvg.setAttribute('fill', 'none');
+                    removeSvg.setAttribute('stroke', 'currentColor');
+                    removeSvg.setAttribute('viewBox', '0 0 24 24');
+                    const removePath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                    removePath.setAttribute('stroke-linecap', 'round');
+                    removePath.setAttribute('stroke-linejoin', 'round');
+                    removePath.setAttribute('stroke-width', '2');
+                    removePath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                    removeSvg.appendChild(removePath);
+                    removeBtn.appendChild(removeSvg);
+                    
+                    listItem.appendChild(removeBtn);
                     list.appendChild(listItem);
                 });
                 fileListContainer.appendChild(list);
@@ -317,7 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
             optionsArea.classList.add('hidden');
             actionArea.classList.add('hidden');
             resultsArea.classList.add('hidden');
-            downloadsList.innerHTML = '';
+            downloadsList.textContent = '';
             splitBtn.disabled = true;
             hideError();
             progressContainer.classList.add('hidden');
@@ -420,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             setProcessingState(true);
-            downloadsList.innerHTML = '';
+            downloadsList.textContent = '';
             const originalFileName = sourcePdf.file.name.replace(/\.pdf$/i, '');
 
             try {

@@ -42,6 +42,6 @@
     "langAuto": { "message": "Auto" },
     "langSpanish": { "message": "Spanish" },
     "langEnglish": { "message": "English" },
-    "actionTitle": { "message": "PDF Tools" },
+    "actionTitle": { "message": "PDF Tools for Firefox" },
     "basedOnWork": { "message": "Based on work by" }
 }
